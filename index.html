@@ -2,16 +2,32 @@
 <html>
 <head>
 	<title>Brian - My Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
+
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/style.css"> <!-- Custom styles-->
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css"> <!-- Font awesom icons-->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"><!-- Bootstrap-->
+	
+	<!-- Bootstrap-->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
 	<link rel="shortcout icon" type="image/icon" href="images/favicon.ico"> <!-- icon-->
 </head>
 <body>
 	<!-- Header-->
-	<header>
-		<div id="menu" class="menu-bar">
+	<div class="header">
+		<div id="menu" class="container menu-bar">
 			<ul>
 				<li><a href="#about">About</a></li>
 				<li><a href="education.html">Education</a></li>
@@ -20,21 +36,35 @@
 				<li><a href="achievements.html">Achievements</a></li>
 			</ul>
 		</div>
-	</header>
+	</div>
 	<!-- //Header-->
 
 
 	<!-- Footer-->
-	<footer>
+	<footer class="container">
+	<hr>
 		<div class="span6">
 		<h2>Get in touch</h2>
-			<form class="" action="" method="POST">
-				<input type="text" name="name" placeholder="Your name" value="">
-				<input type="email" name="email" placeholder="Email" value="">
-				<textarea class="span6" name="text" placeholder="Message"></textarea>
-				<input type="reset" class="btn dark_btn" name="reset" value="Clear Form">
-				<input type="submit" class="btn send_btn" name="submit" value="Send">
-			</form>
+			<div class="">
+				<form action="" method="POST" role="form">
+					<div class="form-group">
+						<label class="control-label" for="name"></label>
+						<input type="text" class="form-control span3" name="name" placeholder="Your name" value="">
+					</div>
+					<div class="form-group">
+						<label class="control-label" for="email"></label>
+						<input type="email" class="form-control span3" name="email" placeholder="Email" value="">
+					</div>
+					<div class="form-group col-10">
+						<label class="control-label" for="message"></label>
+						<textarea class="form-control span6" rows="5" name="text" placeholder="Message"></textarea>
+					</div>
+					<div class="form-group">
+						<input type="reset" class="btn btn-secondary" name="reset" value="Clear Form">
+						<input type="submit" class="btn btn-primary" name="submit" value="Send">
+					</div>
+				</form>
+			</div>
 		</div>
 	</footer>
 	<!-- //Footer-->
