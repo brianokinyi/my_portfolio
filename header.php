@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bodo - Simple One Page Personal</title>
+    <title>Brian - My Portfolio</title>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="Bodo - Simple One Page Personal" name="description">
@@ -38,11 +38,6 @@
     <!--HEADER -->
     <div class="header">
       <div class="for-sticky">
-        <!--LOGO-->
-        <div class="col-md-2 col-xs-6 logo">
-          <a href="index.html"><img alt="logo" class="logo-nav" src="images/logo.png"></a>
-        </div>
-        <!--/.LOGO END-->
       </div>
       <div class="menu-wrap">
         <nav class="menu">
@@ -53,20 +48,20 @@
             <a data-scroll="" href="#about">
               <span>About</span>
             </a>
+            <a data-scroll="" href="skills.php">
+              <span>Skills</span>
+            </a>
             <a data-scroll="" href="#work">
               <span>Work</span>
-            </a>
-             <a data-scroll="" href="#services">
-              <span>Services</span>
             </a>
             <a data-scroll="" href="#employement">
               <span>Employement</span>
             </a>
-            <a data-scroll="" href="#skill">
-              <span>Skills</span>
-            </a>
             <a data-scroll="" href="#education">
               <span>Education</span>
+            </a>
+             <a data-scroll="" href="#services">
+              <span>Services</span>
             </a>
             <a data-scroll="" href="#testimonial">
               <span>Testimonial</span>
@@ -88,5 +83,7 @@
       </button><!--/.for-sticky-->
     </div>
     <!--/.HEADER END-->
-    </body>
-    </html>
+    <!--CONTENT WRAP-->
+    <div class="content-wrap">
+      <!--CONTENT-->
+      <div class="content">
