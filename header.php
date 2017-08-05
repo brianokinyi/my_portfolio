@@ -38,6 +38,7 @@
     <!--HEADER -->
     <div class="header">
       <div class="for-sticky">
+        
       </div>
       <div class="menu-wrap">
         <nav class="menu">
@@ -57,7 +58,7 @@
             <a data-scroll="" href="#employement">
               <span>Employement</span>
             </a>
-            <a data-scroll="" href="#education">
+            <a data-scroll="" href="education.php">
               <span>Education</span>
             </a>
              <a data-scroll="" href="#services">

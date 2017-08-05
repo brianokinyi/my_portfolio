@@ -48,9 +48,6 @@
 
           <div class="footer-bottom">
             <div class="container">
-              <div class="row">
-                <img src="images/logo-bottom.png" alt="logo bottom" class="center-block" />
-              </div>
             </div>
           </div>
         </footer>
