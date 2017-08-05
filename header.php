@@ -31,6 +31,17 @@
     <div id="preloader">
       <div id="status">
         <img alt="logo" src="images/logo-big.png">
+        <ul>
+            <li><a data-scroll="" href="#home" class="active">Home</a></li>
+            <li><a data-scroll="" href="#about">About</a></li>
+            <li><a data-scroll="" href="skills.php">Skills</a></li>
+            <li><a data-scroll="" href="work.php">Work</a></li>
+            <li><a data-scroll="" href="experience.php">Experience</a></li>
+            <li><a data-scroll="" href="education.php">Education</a></li>
+            <li><a data-scroll="" href="services.php">Services</a></li>
+            <li><a data-scroll="" href="blog.php">Blog</a></li>
+            <li><a data-scroll="" href="contact.php">Contact</a></li>
+          </ul>
       </div>
     </div>
     <!--/.PRELOADER END-->
@@ -38,49 +49,22 @@
     <!--HEADER -->
     <div class="header">
       <div class="for-sticky">
-        
-      </div>
-      <div class="menu-wrap">
-        <nav class="menu">
-          <div class="menu-list">
-            <a data-scroll="" href="#home" class="active">
-              <span>Home</span>
-            </a>
-            <a data-scroll="" href="#about">
-              <span>About</span>
-            </a>
-            <a data-scroll="" href="skills.php">
-              <span>Skills</span>
-            </a>
-            <a data-scroll="" href="#work">
-              <span>Work</span>
-            </a>
-            <a data-scroll="" href="#employement">
-              <span>Employement</span>
-            </a>
-            <a data-scroll="" href="education.php">
-              <span>Education</span>
-            </a>
-             <a data-scroll="" href="#services">
-              <span>Services</span>
-            </a>
-            <a data-scroll="" href="#testimonial">
-              <span>Testimonial</span>
-            </a>
-            <a data-scroll="" href="#blog">
-              <span>Blog</span>
-            </a>
-            <a data-scroll="" href="#contact">
-              <span>Contact</span>
-            </a>
+        <div class="my-menu">
+          <ul>
+            <li><a data-scroll="" href="#home" class="active">Home</a></li>
+            <li><a data-scroll="" href="#about">About</a></li>
+            <li><a data-scroll="" href="skills.php">Skills</a></li>
+            <li><a data-scroll="" href="work.php">Work</a></li>
+            <li><a data-scroll="" href="experience.php">Experience</a></li>
+            <li><a data-scroll="" href="education.php">Education</a></li>
+            <li><a data-scroll="" href="services.php">Services</a></li>
+            <li><a data-scroll="" href="blog.php">Blog</a></li>
+            <li><a data-scroll="" href="contact.php">Contact</a></li>
+          </ul>
           </div>
-        </nav>
-        <button class="close-button" id="close-button">Close Menu</button>
       </div>
       <button class="menu-button" id="open-button">
-        <span></span>
-        <span></span>
-        <span></span>
+        
       </button><!--/.for-sticky-->
     </div>
     <!--/.HEADER END-->
