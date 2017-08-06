@@ -29,6 +29,84 @@ TABLE OF CONTENTS:
 
 ------------------------------------------------------------*/
 /*-----------------------------------------1) General--------------------------------------------------*/
+
+
+/*My styles*/
+.myList{
+  float: left;
+  height: 100%;
+}
+.myList ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2f2f2f;
+}
+.myList li{
+  float: left;
+}
+.myList li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
+}
+.myList li a:hover{
+  background-color: #009aff;
+}
+.employer{
+  float: right;
+  padding-right: 5px;
+}
+
+.employer ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2f2f2f;
+}
+.employer li{
+  float: right;
+  border: 2px solid #ff0042;
+}
+.employer li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 14px;
+  text-decoration: none;
+}
+.employer li a:hover{
+  background-color: #ff0042;
+}
+.signUp{
+  float: right;
+}
+.signUp ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ff0042;
+}
+
+.signUp li{
+  float: right;
+}
+.signUp li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 16px;
+  margin-right: 5px;
+  text-decoration: none;
+}
+.signUp li a:hover{
+  background-color: #ff0042;
+}
 @font-face {
   font-family: 'Glyphter';
   src: url('../fonts/Glyphter.eot');
@@ -44,7 +122,7 @@ TABLE OF CONTENTS:
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
-body,
+bodye
 html {
   left: 0;
   top: 0;
@@ -200,14 +278,14 @@ img { max-width: 100%; }
   bottom: 0;
   width: 100%;
   height: 50px;
-  opacity: 0.8;
+  opacity: 0.7;
   z-index: 1;
   top: 0;
   left: 0;
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid #2f2f2f;
   display: block;
-  padding: 0px 15px 5px 15px;
-  background: #ffffff;
+  padding: 0px;
+  background: #2f2f2f;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
