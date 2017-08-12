@@ -233,14 +233,61 @@ TABLE OF CONTENTS:
 }
 .fbbutton { border:1px solid #1D3871; width:94px; background-image:-webkit-linear-gradient(top, #637BAD, #4F67A4); font-size:14px; line-height:25px; font-weight:normal; color:#fff; }
 
+.skills-list ul, li{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.skills-list ul{
+  margin: 2em 0;
+}
+.skills-list li{
+  margin: 1em;
+  margin-left: 3em;
+}
+.skills-list li:before{
+  content: "\f02b";
+  font-family: "FontAwesome";
+  float: left;
+  margin-left: -1.5em;
+  color: #0074D9;
+}
 
-
-
-
-
-
-
-
+.education-table table{
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: auto;
+  border-collapse: collapse;
+  padding: 2px;
+  margin: 2px;
+}
+.myeducation table, th, td{
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #cfcfcf;
+  padding-left: 5px;
+}
+.myeducation th{
+  background-color: #009aff;
+  color: white;
+  padding: 0.8em 1em;
+}
+.myeducation h4{
+  font-style: bold;
+  font-size: 1em;
+  color: #760808;
+  font-family: Arial, Helvetica, sans-serif
+}
+.myeducation h6{
+  color: #000;
+}
+.myeducation p{
+  font-style: italic;
+}
+.myeducation tr:nth-child(even){
+  background-color: #ecf0f2;
+}
+.myeducation tr:hover{
+  background-color: #d0dfe6;
+}
 
 
 
@@ -716,13 +763,13 @@ p {
   line-height: 14px;
   letter-spacing: 0.4px;
   text-transform: uppercase;
-  color: #cccccc;
+  color: #505050;
 }
 .company {
   font-size: 12px;
   line-height: 14px;
-  border: 1px solid #ececec;
-  color: #cccccc;
+  border: 1px solid #009aff;
+  color: #6f3131;
   padding:8px 10px;
   border-radius: 6px;
   display: inline-block;
@@ -859,7 +906,6 @@ ul.portfolio-image li img {
   height: 100%;
   left: 0;
   top: 0;
-  -webkit-filter: grayscale(100%);
   transition: filter, transform, 0.5s;
 }
 ul.portfolio-image li .decription-wrap {
@@ -926,6 +972,7 @@ ul.portfolio-image li .desc{
   margin-bottom: 20px;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
+  color: rgb(0, 0,);
 }
 .text-grey {
   color: #434343;
@@ -935,7 +982,7 @@ ul.portfolio-image li .desc{
 /*---------- c. experience -----------*/
 .wrap-card {
   position: relative;
-  box-shadow: 0px 0px 0px #818181;
+  box-shadow: 0px 0px 0px #9cc0d8;
   transition: all 0.2s ease 0s;
   -webkit-transform: translateY(0px) translateX(0px);
 }
@@ -961,7 +1008,7 @@ ul.portfolio-image li .desc{
   -webkit-transform-origin: 100% 0;
 }
 .wrap-card:hover {
-  box-shadow: 20px 20px 0px #818181;
+  box-shadow: 20px 20px 0px #9cc0d8;
   -webkit-transform: translateY(-10px) translateX(-10px);
   transition: all 0.2s ease 0.4s;
 }
@@ -1454,7 +1501,7 @@ ul.portfolio-image li .desc{
   width: 0px;
   position: relative;
 }
-.skillst .count-bar {background-color: #818181;}
+.skillst .count-bar {background-color: #009aff;}
 .skillst .count-bar span{ font-size: 12px;}
 .skillst .title {
   position: absolute;
@@ -1473,7 +1520,7 @@ ul.portfolio-image li .desc{
   height: 18px;
   color: #fff;
   text-align: center;
-  background-color: #2f2f2f;
+  background-color: #009aff;
 }
 .skillst .count-bar .count span {
   position: relative;
@@ -1488,5 +1535,5 @@ ul.portfolio-image li .desc{
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
 }
-.skillst .count-bar .count { background-color: #818181;}
-.skillst .count-bar .count span:after { border-top: 4px solid #818181;}
+.skillst .count-bar .count { background-color: #d02020;}
+.skillst .count-bar .count span:after { border-top: 4px solid #d02020;}
