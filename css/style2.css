@@ -8,7 +8,6 @@ fieldset, form, label, legend {
 	margin: 0;
 	padding: 0;
 	vertical-align: baseline;
-	font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 body.login { background: url(../images/bg.jpg); }
 h2 { font-size: 30px; line-height:38px; font-weight:normal; }

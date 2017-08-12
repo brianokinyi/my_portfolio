@@ -60,6 +60,6 @@
 			echo "Thank you for subscribing to my services.";
 		}
 
-		header("refresh:2;url=../index.html");
+		header("refresh:1;url=../employer.php");
 	}
 ?>

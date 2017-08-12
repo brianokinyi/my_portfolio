@@ -56,6 +56,50 @@ TABLE OF CONTENTS:
 .myList li a:hover{
   background-color: #009aff;
 }
+
+
+
+
+
+
+
+.myList2{
+  float: right;
+  height: 100%;
+}
+.myList2 ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2f2f2f;
+}
+.myList2 li{
+  float: right;
+}
+.myList2 li a{
+  display: block;
+  color: #5b5a5a;
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
+}
+.myList2 li a:hover{
+  background-color: #dddbdb;
+  border-color: #b1b0b0;
+}
+.bottomlist{
+  margin-right: 30px;
+}
+.bottomtext{
+  float: left;
+  font-size: 1em;
+  margin: 10px;
+  padding: 0;
+}
+
+
+
 .employer{
   float: right;
   padding-right: 5px;
@@ -288,6 +332,90 @@ TABLE OF CONTENTS:
 .myeducation tr:hover{
   background-color: #d0dfe6;
 }
+.mytitle{
+  text-align: center;
+  padding: 30px 0;
+  margin: 2px;
+}
+.contactright1 {
+    margin-bottom: 3em;
+}
+.contactright1:nth-child(4), .contactright1:nth-child(5) {
+    margin-bottom: 0em;
+}
+.contactright1 h4 {
+    color: #353535;
+    font-size: 1.1em;
+    text-transform: capitalize;
+    margin: 8px 0;
+    font-family:  Arial, Helvetica, sans-serif;
+}
+.contactright1 p {
+    color: #353535;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+    line-height: 28px;
+}
+.contactright1 a {
+    color: #313131;
+  text-decoration:none;
+}
+.contactright1 a:hover{
+    color: #ff4f81;
+}
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+span.glyphicon {
+    color: #FFF;
+    background: #009aff;
+    border: 1px solid #009aff;
+    padding: 18px;
+    text-align: center;
+    border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius:50%;
+  -moz-border-radius:50%;
+  -ms-border-radius:50%;
+    font-size: 1em;
+  -webkit-transition:.5s all;
+  -moz-transition:.5s all; 
+  transition:.5s all;
+    -o-transition: all .5s all;
+    -ms-transition: all .5s all;
+}
+span.glyphicon:hover {
+    background: #fff;
+    color: #009aff;
+    border: 1px solid #009aff;
+}
+.glyphicon-map-marker:before {
+  content: "\e062";
+}
+.glyphicon-phone-alt:before {
+  content: "\e183";
+}
+.glyphicon-phone:before {
+  content: "\e145";
+}
+.contactright1 {
+    width: 50%;
+    float: left;
+  }
+  .graphicons{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .header a:active{
+    background: #009aff;
+  }
 
 
 
@@ -1352,8 +1480,9 @@ ul.portfolio-image li .desc{
   -webkit-transition: 0.2s ease all;
 }
 #contact input[type=submit]:hover {
-  background: #2b2b2b;
-  color: #ffffff;
+  background: #009aff;
+  border-color: #009aff;
+  color: #fff;
 }
 @-webkit-keyframes inputHighlighter {
   from {

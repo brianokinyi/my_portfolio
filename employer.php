@@ -80,11 +80,10 @@
 	<script type="text/javascript">
 		jQuery(".jslider-pointer").mousedown(function(){
 			$("#salary").val("200000");
-			var value = $(".jslider-pointer").slider("value");
 			$("#salary").val(500);
 		});
 		jQuery("#btn1").click(function(){
-			
+			var value = $(".jslider-pointer").slider("value");
 		});
 	</script>
      
