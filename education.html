@@ -5,7 +5,6 @@
     <title>Brian - My Portfolio</title>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta content="Bodo - Simple One Page Personal" name="description">
     <meta content="BdgPixel" name="author">
     <!--Fav-->
     <link href="images/favicon.ico" rel="shortcut icon">
@@ -27,13 +26,6 @@
     <![endif]-->
   </head>
   <body>
-    <!--PRELOADER-->
-    <div id="preloader">
-      <div id="status">
-        <img alt="logo" src="images/logo-big.png">
-      </div>
-    </div>
-    <!--/.PRELOADER END-->
 
     <!--HEADER -->
     <div class="header">
@@ -138,20 +130,20 @@
                   <span>Contact</span>
                 </h3>
                 <p class="content-detail">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                  Feel free to send me a message. I will reply in a few seconds.
                 </p>
 
               </div>
               <div class="col-md-9 content-right">
-                <form>
+                <form method="POST" action="scripts/send_form_email.php">
                   <div class="group">
-                    <input required="" type="text"><span class="highlight"></span><span class="bar"></span><label>Name</label>
+                    <input required="" type="text" name="name"><span class="highlight"></span><span class="bar"></span><label>Name</label>
                   </div>
                   <div class="group">
-                    <input required="" type="email"><span class="highlight"></span><span class="bar"></span><label>Email</label>
+                    <input required="" type="email" name="email"><span class="highlight"></span><span class="bar"></span><label>Email</label>
                   </div>
                   <div class="group">
-                    <textarea required=""></textarea><span class="highlight"></span><span class="bar"></span><label>Message</label>
+                    <textarea required="" name="message"></textarea><span class="highlight"></span><span class="bar"></span><label>Message</label>
                   </div>
                   <input id="sendMessage" name="sendMessage" type="submit" value="Send Message">
                 </form>
