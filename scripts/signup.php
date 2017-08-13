@@ -8,7 +8,9 @@
 
 		//Check if empty
 		if(empty($firstname)||empty($lastname)||empty($email)||empty($password)||empty($password2)){
-			die("You need to fill all the fields.");
+			echo ("You need to fill all the fields.");
+			header("refresh:5;url=../signup.html");
+			die();
 		}
 
 		$error_message = "";
@@ -36,7 +38,9 @@
 
 		//Send message
 		if(strlen($error_message) > 0){
-			die("I am sorry but you have an error in your form.".$error_message);
+			echo $error_message;
+			header("refresh:5;url=../signup.html");
+			die();
 		}
 
 		//Connect to database
@@ -48,7 +52,9 @@
 		$conn = new mysqli($servername, $serveruser, $serverpass, $dbname);
 		//Check connection
 		if($conn->connect_error){
-			die("Error while connecting to database".$conn->connect_error);
+			echo ("Error while connecting to database".$conn->connect_error);
+			header("refresh:5;url=../signup.html");
+			die();
 		}
 
 		//Hash password using bcrypt
@@ -57,9 +63,16 @@
 		$sql = "INSERT INTO clients(firstname, lastname, email, password)
 			VALUES('$firstname', '$lastname', '$email', '$hash')";
 		if($conn->query($sql) == TRUE){
-			echo "Thank you for subscribing to my services.";
+			?>
+				<script type="text/javascript">
+					window.alert("Thank you for subscribing to my services");
+				</script>
+			<?php
 		}
-
+		$username = $firstname." ".$lastname;
+		session_start();
+		$_SESSION['email'] = $email;
+		$_SESSION['username'] = $username;
 		header("refresh:1;url=../employer.php");
 	}
 ?>

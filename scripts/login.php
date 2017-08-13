@@ -5,10 +5,22 @@
 
 		//Check if empty
 		if(empty($email)){
-			die("Email cannot be blank");
+			?>
+				<script type="text/javascript">
+					window.alert("Email cannot be blank");
+				</script>
+			<?php
+			header("refresh:5;url=../signup.html");
+			die();
 		}
 		if(empty($password)){
-			die("Password cannot be blank");
+			?>
+				<script type="text/javascript">
+					window.alert("Password cannot be blank");
+				</script>
+			<?php
+			header("refresh:5;url=../signup.html");
+			die();
 		}
 
 		//Check if valid
@@ -16,6 +28,12 @@
 		$email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
 		if(!preg_match($email_exp, $email)){
 			$error_message .= "The email you entered does not seem to be valid";
+		}
+		//Send message
+		if(strlen($error_message) > 0){
+			echo $error_message;
+			header("refresh:5;url=../signup.html");
+			die();
 		}
 
 		//Connect to database
@@ -31,22 +49,29 @@
 		}
 
 		//Fetch and confirm details
-		$sql = "SELECT password  FROM clients WHERE email='$email'";
+		$sql = "SELECT * FROM clients WHERE email='$email'";
 		$result = $conn->query($sql);
 		if($result->num_rows > 0){
 			$row = $result->fetch_assoc();
 			$hash = $row['password'];
+			$username = $row['firstname'];
+			$username .= " ".$row['lastname'];
 
 			//Verify password
 			if(password_verify($password, $hash)){
-				header("refresh:1;url=../index.html");
+				session_start();
+				$_SESSION['email'] = $email;
+				$_SESSION['username'] = $username;
+				header("refresh:1;url=../employer.php");
 			}else{
-				echo "Passwords do not match";
+				echo "Passwords and email do not match";
 				header("refresh:2;url=../signup.html");
+				die();
 			}
 		}else{
 			echo "Your email is not registered. Please Signup to continue";
 			header("refresh:2;url=../signup.html");
+			die();
 		}
 	}
 
