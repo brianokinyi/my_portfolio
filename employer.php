@@ -82,8 +82,8 @@
         <a href="#" title="Home"><img src="images/brian.jpg"><h2>Brian Okinyi</h2></a> 
       </div>
       <div class="user">
-        <h4><span><?php echo $_SESSION['username'];?></span></h4><br>
-        <h5><span><?php echo $_SESSION['email'];?></span></h5>
+        <h4><span><a href="#"><img src="images/user.png"></a><?php echo $_SESSION['username'];?></span></h4><br>
+        <h5><span><a href="#"><img src="images/envelope.png"></a><?php echo $_SESSION['email'];?></span></h5>
       </div>
     </div>
   </div>
@@ -136,10 +136,10 @@
               <!-- //End Deductions-->
 
               <div>
-                <span class="col-md-2">Net Pay</span><output name="net" id="salary" value="" class="netSalary"><br><span class="col-md-2" style="float: right;"></span>
+                <span class="col-md-2">Net Pay</span><output name="net" id="salary" value="" class="netSalary">600000</output><br><span class="col-md-2" style="float: right;"></span>
               </div>
               <div>
-                <span class="col-md-2">Job Description</span><textarea name="description" placeholder="About job" value="" class="description"></textarea></span>
+                <span class="col-md-2 job-desc">Description</span><textarea name="description" placeholder="Short about job(required)" value="" required class="col-md-10 description"></textarea></span>
               </div>
               <div>
                 <span class="col-md-2"></span><input type="submit" name="submit" value="Submit" id="submit" class="col-md-4 salaryButton">
