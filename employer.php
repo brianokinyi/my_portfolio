@@ -106,42 +106,46 @@
       <div class="col-md-9 content-right">
         <div class="row">
           <div class="layout">
-        <div class="layout-slider" style="width: 100%">
-          <span class="col-md-2"> Basic Salary</span><span style="display: inline-block; width: 400px; padding: 0 5px;"><input id="SliderSingle" type="slider" name="basic" value="500000" /></span>
-        </div>
-        <script type="text/javascript" charset="utf-8">
-          jQuery("#SliderSingle").slider({ from: 30000, to: 5000000, step: 5000, round: 5, dimension: '&nbsp;Ksh', skin: "round" });
-          
-        </script>
-        <!-- //End Basic Salary-->
+            <form id="salary-input" action="scripts/salary.php" method="POST" onclick="net.value=parseInt(SliderSingle.value)+parseInt(Slider2.value)-parseInt(Slider1.value)">
+              <div class="slider-desc">
+                <p>Move sliders to set Net Pay.</p>
+              </div>
+              <div class="layout-slider" style="width: 100%;">
+                <span class="col-md-2"> Basic Salary</span><span style="display: inline-block; width: 600px; padding: 0 5px;"><input id="SliderSingle" type="slider" name="basic" value="500000" /></span>
+              </div>
+              <script type="text/javascript" charset="utf-8">
+                jQuery("#SliderSingle").slider({ from: 10000, to: 1000000, step: 5000, smooth: true, round: 0, dimension: '&nbsp;Ksh', skin: "round" });
+              </script>
+              <!-- //End Basic Salary-->
 
 
-        <div class="layout-slider">
-          <span class="col-md-2">Allowances</span><span style="display: inline-block; width: 400px; padding: 0 5px;"><input id="Slider2" type="slider" name="allowances" value="100000" /></span>
-        </div>
-        <script type="text/javascript" charset="utf-8">
-          jQuery("#Slider2").slider({ from: 10000, to: 500000, heterogeneity: ['50/50000'], step: 1000, dimension: '&nbsp; Ksh', skin: "round" });
-        </script>
-        <!-- //End Allowances-->
+              <div class="layout-slider">
+                <span class="col-md-2">Allowances</span><span style="display: inline-block; width: 600px; padding: 0 5px;"><input id="Slider2" type="slider" name="allowances" value="100000" /></span>
+              </div>
+              <script type="text/javascript" charset="utf-8">
+                jQuery("#Slider2").slider({ from: 1000, to: 500000, heterogeneity: ['50/50000'], step: 1000, dimension: '&nbsp; Ksh', skin: "round" });
+              </script>
+              <!-- //End Allowances-->
 
-        <div class="layout-slider" style="width: 100%">
-          <span class="col-md-2">Deductions</span><span style="display: inline-block; width: 400px; padding: 0 5px;"><input id="Slider1" type="slider" name="deductions" value="10000" /></span>
-        </div>
-        <script type="text/javascript" charset="utf-8">
-          jQuery("#Slider1").slider({ from: 5000, to: 500000, step: 500, smooth: true, round: 0, dimension: "&nbsp;Ksh ", skin: "round" });
-        </script>
-        <!-- //End Deductions-->
+              <div class="layout-slider" style="width: 100%">
+                <span class="col-md-2">Deductions</span><span style="display: inline-block; width: 600px; padding: 0 5px;"><input id="Slider1" type="slider" name="deductions" value="0" /></span>
+              </div>
+              <script type="text/javascript" charset="utf-8">
+                jQuery("#Slider1").slider({ from: 0, to: 100000, step: 500, smooth: true, round: 0, dimension: "&nbsp;Ksh ", skin: "round" });
+              </script>
+              <!-- //End Deductions-->
 
-        <div>
-          <span class="col-md-2">Net Pay</span><input type="text" name="net" id="salary" value="" style="width: 20%; border-radius: 12px;font-family: Arial, Helvetica, sans-serif; text-align: center;"><br>
-        </div>
-        <div class="button">
-          <span class="col-md-2"></span><input type="submit" name="submit" value="Submit" id="btn1" class="col-md-7" style="margin: 30px 0; height: 3em; border-radius: 8px; background-color: #009aff; border: 1px solid rgb(250, 250, 250); color: #fff; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
-        </div>
-        
-        <!-- //End Net Salary-->
-
-
+              <div>
+                <span class="col-md-2">Net Pay</span><output name="net" id="salary" value="" class="netSalary"><br><span class="col-md-2" style="float: right;"></span>
+              </div>
+              <div>
+                <span class="col-md-2">Job Description</span><textarea name="description" placeholder="About job" value="" class="description"></textarea></span>
+              </div>
+              <div>
+                <span class="col-md-2"></span><input type="submit" name="submit" value="Submit" id="submit" class="col-md-4 salaryButton">
+              </div>
+              <!-- //End Net Salary-->
+            </form>
       </div><!-- //End Container--> 
         </div>
       </div>
@@ -221,18 +225,7 @@
       <!--/.CONTENT END-->
       </div>
     <!--/.CONTENT-WRAP END-->
-    </div>
-
-    <script type="text/javascript">
-    jQuery(".jslider-pointer").mousedown(function(){
-      $("#salary").val("200000");
-      $("#salary").val(500);
-    });
-    jQuery("#btn1").click(function(){
-      var value = $(".jslider-pointer").slider("value");
-    });
-  </script>
-    
+    </div>    
 
     <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="js/jquery.appear.js" type="text/javascript"></script>
