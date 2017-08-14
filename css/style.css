@@ -427,9 +427,9 @@ span.glyphicon:hover {
   }
 
 .user{
-  float: right;
+  float: left;
   padding: 10px;
-  color: #d0dfe6;
+  color: #fff;
   height: inherit;
   font-family: Arial, Helvetica, sans-serif;
   position: absolute;
@@ -439,16 +439,24 @@ span.glyphicon:hover {
   background-color: transparent;
 }
 .user h4, h5{
-  float: right;
+  float: left;
   
   font-family: Arial, Helvetica, sans-serif;
 }
 .user span{
-  text-transform: lowercase;
-  float: right;
+  text-transform: capitalize;
+  float: left;
   display: inline;
   font-family: Arial, Helvetica, sans-serif;
 }
+.user img{
+  height: 22px;
+  width: 22px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 0;
+}
+
 
 
 

@@ -156,14 +156,15 @@ h2 { font-size: 30px; line-height:38px; font-weight:normal; }
 	float: left;
 	font-family: Arial, Helvetica, sans-serif; 
 	text-align: center;
-	border: 1px solid #000;
+	border: 1px solid rgba(0, 145, 255, 0.4);
 	border-radius: 6px;
-	height: 40px;
-	width: 100px;
+	height: 45px;
+	width: 150px;
 	margin-right: 400px;
-	background-color: #fff;
-	font-size: 1.2em;
+	background-color: transparent;
+	font-size: 1.3em;
 	font-weight: bold;
+	color: #797979;
 }
 .salaryButton{
 	float: left;
@@ -176,4 +177,22 @@ h2 { font-size: 30px; line-height:38px; font-weight:normal; }
 	color: #fff; 
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 	font-family: Arial, Helvetica, sans-serif;
+}
+.slider-desc{
+	padding: 5px 0;
+	margin: 20px 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.5em;
+}
+.description{
+	padding: 10px;
+	margin: 20px 0;
+	border-radius: 8px;
+	border: 1px solid rgba(128, 128, 128, 0.8);
+	background-color: rgba(255, 255, 255, 0.7);
+	color: #808080;
+}
+.job-desc{
+	padding: 10px;
+	margin: 20px 0;
 }
