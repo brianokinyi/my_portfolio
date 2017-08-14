@@ -24,11 +24,11 @@ h2 { font-size: 30px; line-height:38px; font-weight:normal; }
 .loginbox label { display: block; color: #666; letter-spacing: 1px; font-size: 18px; }
 .loginbox input.mini { width:195px; }
 .loginbox input { 
-	padding: 12px 10px; color: #ccc; 
-	font-family: Arial, Helvetica, sans-serif; margin-top: 8px; font-size: 15px; border: 1px solid #ccc; width: 420px;  outline: none; 
+	padding: 12px 10px; color: #4a4949; 
+	font-family: Arial, Helvetica, sans-serif; margin-top: 8px; font-size: 15px; border: 1px solid #8e8d8d; width: 420px;  outline: none; 
 }
 .loginbox button { 
-	background: #5870A8; background-image:-webkit-linear-gradient(top, #637BAD, #4F67A4); padding: 10px 20px; font-size: 18px; border: 1px solid #1D3871; letter-spacing: 1px; color: #fff; width: 440px; line-height:30px; font-family:	'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background: #009aff; background-image:-webkit-linear-gradient(top, #637BAD, #4F67A4); padding: 10px 20px; font-size: 18px; border: 1px solid #1D3871; letter-spacing: 1px; color: #fff; width: 440px; line-height:30px; font-family:	'Helvetica Neue', Helvetica, Arial, sans-serif;
 	-moz-box-shadow: 1px 1px 3px #1D3871; -webkit-box-shadow: 1px 1px 3px #1D3871; box-shadow: 1px 1px 3px #1D3871; cursor: pointer;
 }
 
@@ -49,8 +49,8 @@ h2 { font-size: 30px; line-height:38px; font-weight:normal; }
 
 
 #facebook-Bar {
-	background:#45619D;
-	border-bottom: 1px solid #0053A6;
+	background: transparent;
+	border-bottom: 1px solid #009aff;
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.52);
 	min-width: 1000px;
 	width: 100%;
@@ -64,18 +64,30 @@ h2 { font-size: 30px; line-height:38px; font-weight:normal; }
 	display:block;
 }
 /*-------LOGO-----------*/
-#logo {
+#logo-signup {
 	float: left;
+	display: inline;
 	height: 70px;
 	position: relative;
 	width: 160px;
+	margin-left: 10px;
 }
-#logo a {
+#logo-signup a {
+	display: inline;
+	float: left;
 	position: absolute;
-	top: 20px;
+	top: 10px;
 	font-size:23px; font-weight:bold; color:#FFF;
 	text-decoration:none;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-shadow: 2px 2px 2px black;
+}
+#logo-signup img{
+	display: inline;
+	float: left;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
 }
 
 /*-------Login-----------*/
@@ -97,7 +109,7 @@ h2 { font-size: 30px; line-height:38px; font-weight:normal; }
 	font-size: 13px;
 	margin: 0;
 	padding: 5px 8px 5px 8px;
-	width: 166px;
+	width: 25em;
 	border:1px solid #3A518A;
 }
 #login_form .inputtext:hover {
@@ -121,4 +133,22 @@ h2 { font-size: 30px; line-height:38px; font-weight:normal; }
 	text-align: left;
 	vertical-align: middle;
 }
-.fbbutton { border:1px solid #1D3871; width:94px; background-image:-webkit-linear-gradient(top, #637BAD, #4F67A4); font-size:14px; line-height:25px; font-weight:normal; color:#fff; }
+.fbbutton { border:1px solid #1D3871; width:94px; 
+	background-image:-webkit-linear-gradient(top, #637BAD, #4F67A4); 
+	font-size:14px; line-height:25px; font-weight:normal; color:#fff; }
+
+
+#fb-bar {
+  background:#45619D;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.52);
+  min-width: 1000px;
+  width: 100%;
+  z-index: 1000;
+}
+#fb-frame {
+  margin-left:40px;
+  margin-right:auto;
+  max-width:1000px;
+  height:60px;
+  display:block;
+}
