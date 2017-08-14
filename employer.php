@@ -65,8 +65,21 @@
     <!-- header starts here -->
   <div id="fb-bar">
     <div id="fb-frame">
-      <div id="logo">
-        <a href="index.html"><h2>B.</h2></a> 
+      <div class="myList3">
+          <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div id="logo">
+        <a href="#" title="Home"><img src="images/brian.jpg"><h2>Brian Okinyi</h2></a> 
       </div>
       <div class="user">
         <h4><span><?php echo $_SESSION['username'];?></span></h4><br>
