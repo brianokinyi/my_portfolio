@@ -68,6 +68,8 @@
 				</script>
 			<?php
 			header("refresh:0;url=../index.html");
+			session_unset();
+			session_destroy();
 		}
 	}
 ?>
