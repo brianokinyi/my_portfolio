@@ -1,6 +1,7 @@
 <?php
 	//Session
 	session_start();
+	ob_start();
 
 	if(isset($_POST['submit'])){
 		$basic = $_POST['basic'];
@@ -19,7 +20,7 @@
 					window.alert("Basic salary cannot be blank");
 				</script>
 			<?php
-				header("refresh:0;url=../employer.php");
+				header("refresh:1;url=https://brianokinyi.000webhostapp.com/employer.php");
 				die();
 		}elseif(empty($allowances)){
 			?>
@@ -27,7 +28,7 @@
 					window.alert("Allowances cannot be blank");
 				</script>
 			<?php
-				header("refresh:0;url=../employer.php");
+				header("refresh:1;url=https://brianokinyi.000webhostapp.com/employer.php");
 				die();
 		}elseif(empty($description)){
 			?>
@@ -35,18 +36,18 @@
 					window.alert("Please provide a short description before proceeding");
 				</script>
 			<?php
-				header("refresh:0;url=../employer.php");
+				header("refresh:1;url=https://brianokinyi.000webhostapp.com/employer.php");
 				die();
 		}
 
 		//Calculate net pay
 		$net = $basic + $allowances - $deductions;
 
-		//Database variables
+		//Connect to database
 		$servername = "localhost";
-		$serveruser = "id2187064_brianokinyi";
-		$serverpass = "12345678";
-		$dbname = "id2187064_my_portfolio";
+		$serveruser = "root";
+		$serverpass = "";
+		$dbname = "my_portfolio";
 
 		//Connect to database
 		$conn = new mysqli($servername, $serveruser, $serverpass, $dbname);
@@ -67,9 +68,21 @@
 					window.alert("Thank You. I will contact you soon");
 				</script>
 			<?php
-			header("refresh:0;url=../index.html");
+			header("refresh:1;url=https://brianokinyi.000webhostapp.com");
 			session_unset();
 			session_destroy();
 		}
 	}
+
+
+
+	/*
+		//Database variables for 000webhostpApp
+		$servername = "localhost";
+		$serveruser = "id2187064_brianokinyi";
+		$serverpass = "12345678";
+		$dbname = "id2187064_my_portfolio";
+	*/
 ?>
+
+
