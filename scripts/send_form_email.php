@@ -1,5 +1,6 @@
 <?php
 if(isset($_POST['sendMessage'])) {
+  ob_start();
  
     // EDIT THE 2 LINES BELOW AS REQUIRED
     $email_to = "brianokinyi.bo@gmail.com";
