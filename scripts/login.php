@@ -1,4 +1,5 @@
 <?php
+	ob_start();
 	if(isset($_POST['login'])){
 		$email = $_POST['email'];
 		$password = $_POST['password'];
@@ -10,7 +11,7 @@
 					window.alert("Email cannot be blank");
 				</script>
 			<?php
-			header("refresh:5;url=../signup.html");
+			header("refresh:1;url=https://brianokinyi.000webhostapp.com/signup.html");
 			die();
 		}
 		if(empty($password)){
@@ -19,28 +20,28 @@
 					window.alert("Password cannot be blank");
 				</script>
 			<?php
-			header("refresh:5;url=../signup.html");
+			header("refresh:1;url=https://brianokinyi.000webhostapp.com/signup.html");
 			die();
 		}
 
 		//Check if valid
-		$error_message = "";
 		$email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
 		if(!preg_match($email_exp, $email)){
-			$error_message .= "The email you entered does not seem to be valid";
-		}
-		//Send message
-		if(strlen($error_message) > 0){
-			echo $error_message;
-			header("refresh:5;url=../signup.html");
-			die();
+			?>
+				<script type="text/javascript">
+					window.alert("The email you entered does not seem to be valid");
+				</script>
+				<?php
+				header("refresh:1;url=https://brianokinyi.000webhostapp.com/signup.html");
+				die();
+
 		}
 
 		//Connect to database
 		$servername = "localhost";
-		$serveruser = "id2187064_brianokinyi";
-		$serverpass = "12345678";
-		$dbname = "id2187064_my_portfolio";
+		$serveruser = "root";
+		$serverpass = "";
+		$dbname = "my_portfolio";
 
 		$conn = new mysqli($servername, $serveruser, $serverpass, $dbname);
 		//If connected successfully
@@ -62,15 +63,23 @@
 				session_start();
 				$_SESSION['email'] = $email;
 				$_SESSION['username'] = $username;
-				header("refresh:1;url=../employer.php");
+				header("location:../employer.php");
 			}else{
-				echo "Passwords and email do not match";
-				header("refresh:2;url=../signup.html");
+				?>
+				<script type="text/javascript">
+					window.alert("Passwords and email do not match");
+				</script>
+				<?php
+				header("refresh:1;url=https://brianokinyi.000webhostapp.com/signup.html");
 				die();
 			}
 		}else{
-			echo "Your email is not registered. Please Signup to continue";
-			header("refresh:2;url=../signup.html");
+			?>
+				<script type="text/javascript">
+					window.alert("Your email is not registered. Please Signup to continue");
+				</script>
+			<?php
+			header("refresh:1;url=https://brianokinyi.000webhostapp.com/signup.html");
 			die();
 		}
 	}
