@@ -43,10 +43,10 @@
 		$net = $basic + $allowances - $deductions;
 
 		//Database variables
-		$servername = 'localhost';
-		$serveruser = 'root';
-		$serverpass = '';
-		$dbname = 'my_portfolio';
+		$servername = "localhost";
+		$serveruser = "id2187064_brianokinyi";
+		$serverpass = "12345678";
+		$dbname = "id2187064_my_portfolio";
 
 		//Connect to database
 		$conn = new mysqli($servername, $serveruser, $serverpass, $dbname);
