@@ -1,4 +1,5 @@
 <?php
+  ob_start();
   session_start();
   if(!isset($_SESSION['email'])){
     ?>
@@ -6,7 +7,7 @@
       window.alert("You need to log in first!");
     </script>
     <?php
-      header("refresh:1;url=signup.html");
+      header("refresh:1;url=https://brianokinyi.000webhostapp.com/signup.html");
       die();
   }
 ?>
