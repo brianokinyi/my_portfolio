@@ -9,7 +9,12 @@ fieldset, form, label, legend {
 	padding: 0;
 	vertical-align: baseline;
 }
-body.login { background: url(../images/bg.jpg); }
+body.login { 
+	background: url(../images/bg.jpg); 
+	background-repeat: no-repeat;
+	width: 100%;
+	height: inherit;
+}
 h2 { font-size: 30px; line-height:38px; font-weight:normal; }
 .loginbox { background: #FBFCFD; padding: 10px; width: 490px; margin: 4% auto 0 auto; position: relative; }
 .loginboxinner { 
