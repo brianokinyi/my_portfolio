@@ -78,13 +78,15 @@
 			$email_to = "brianokinyi.bo@gmail.com";
 			$email_from = $email;
 			$email_subject = "Database activity at 000webhostpApp";
-			$email_message = "Name: $username
-				Email:</b> $email
-				Basic Salary: $basic
-				Allowances: $allowances
-				Deductions: $deductions
-				Net Salary: $net
-				Description: $description";
+
+			$email_message = "Name: $username"."\n";
+			$email_message .= "Email:</b> $email"."\n";
+			$email_message .= "Basic Salary: $basic"."\n";
+			$email_message .= "Allowances: $allowances"."\n";
+			$email_message .= "Deductions: $deductions"."\n";
+			$email_message .= "Net Salary: $net"."\n";
+			$email_message .= "Description: $description"."\n";
+
 			// create email headers
 			$headers = 'From: '.$email_from."\r\n".
 			'Reply-To: '.$email_from."\r\n" .
