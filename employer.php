@@ -1,5 +1,4 @@
 <?php
-/*
   ob_start();
   session_start();
   if(!isset($_SESSION['email'])){
@@ -11,7 +10,6 @@
       header("refresh:1;url=https://brianokinyi.000webhostapp.com/signup.html");
       die();
   }
-  */
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +21,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="description" content="I am more interested in finding a position that is good fit for my skills and interests. I am confident that you are offering a salary that is competetive in the current market.">
     <meta content="Brian Okinyi" name="author">
+    <meta name="image" content="images/bw-4.png">
     <!--Fav-->
     <link href="images/favicon.ico" rel="shortcut icon">
     
@@ -119,9 +118,10 @@
         <div class="row">
           <div class="layout">
             <form id="salary-input" action="scripts/salary.php" method="POST" onclick="net.value=parseInt(SliderSingle.value)+parseInt(Slider2.value)-parseInt(Slider1.value)">
-              <div class="slider-desc">
-                <p>Move sliders to set Net Pay.</p>
+              <div class="layout-slider">
+                <span style="display: inline-block; width: 600px; padding: 0 5px;"><span class="slider-desc">Move sliders to set net pay or <a href="previous_salaries.php"> view your previous salaries here.</a></span></span>
               </div>
+              
               <div class="layout-slider" style="width: 100%;">
                 <span class="col-md-2"> Basic Salary</span><span style="display: inline-block; width: 600px; padding: 0 5px;"><input id="SliderSingle" type="slider" name="basic" value="500000" /></span>
               </div>

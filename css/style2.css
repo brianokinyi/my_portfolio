@@ -201,3 +201,32 @@ h2 { font-size: 30px; line-height:38px; font-weight:normal; }
 	padding: 10px;
 	margin: 20px 0;
 }
+.slider-desc{
+	font-size: 1em;
+	text-align: center;
+	margin: 30px 0;
+	padding: 10px;
+}
+.slider-desc a{
+	color: blue;
+}
+.slider-desc a:hover{
+	color: #0091ff;
+}
+.backpage{
+	margin: 30px 0 0 0;
+	padding: 0;
+	width: 100%;
+	height: 70px;
+}
+.backpage a{
+	
+	float: right;
+	color: blue;
+	padding: 5px;
+}
+.backpage a:hover{
+	color: #0091ff;
+	font-size: 1.2em;
+
+}

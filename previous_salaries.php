@@ -1,5 +1,4 @@
 <?php
-/*
   ob_start();
   session_start();
   if(!isset($_SESSION['email'])){
@@ -10,8 +9,31 @@
     <?php
       header("refresh:1;url=https://brianokinyi.000webhostapp.com/signup.html");
       die();
-  }
+  }  $username = $_SESSION['username'];
+  $email = $_SESSION['email'];
+
+  //Connect to database
+    //Database variables for 000webhostpApp
+    $servername = "localhost";
+    $serveruser = "id2187064_brianokinyi";
+    $serverpass = "12345678";
+    $dbname = "id2187064_my_portfolio";
+  
+  //Local Database variables
+  /*
+  $servername = "localhost";
+  $serveruser = "root";
+  $serverpass = "";
+  $dbname = "my_portfolio";
   */
+
+  //Connect to database
+  $conn = new mysqli($servername, $serveruser, $serverpass, $dbname);
+
+  //Check connection
+  if($conn->connect_error){
+    die("Connection failed: ".$$conn->connect_error);
+  }
 ?>
 
 <!DOCTYPE html>
@@ -23,8 +45,30 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="description" content="I am more interested in finding a position that is good fit for my skills and interests. I am confident that you are offering a salary that is competetive in the current market.">
     <meta content="Brian Okinyi" name="author">
+    <meta name="image" content="images/reza.jpg">
     <!--Fav-->
     <link href="images/favicon.ico" rel="shortcut icon">
+
+
+    <!--Inline Style for table-->
+    <style type="text/css">
+      table{
+        width: 100%;
+      }
+      table, tr, th, td{
+          padding: 10px;
+
+      }
+      table tr th{
+        text-align: center;
+        color: rgb(66, 70, 72);
+
+      }
+      table td{
+        color: rgb(128,128,128);
+      }
+    </style>
+    <!--//Inline Style for table-->
     
     <!--styles-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -94,8 +138,8 @@
         <a href="#" title="Home"><img src="images/brian.jpg"><h2>Brian Okinyi</h2></a> 
       </div>
       <div class="user">
-        <h4><span><a href="#"><img src="images/user.png"></a><?php echo $_SESSION['username'];?></span></h4><br>
-        <h5><span><a href="#"><img src="images/envelope.png"></a><?php echo $_SESSION['email'];?></span></h5>
+        <h4><span><a href="#"><img src="images/user.png"></a><?php echo $username;?></span></h4><br>
+        <h5><span><a href="#"><img src="images/envelope.png"></a><?php echo $email;?></span></h5>
       </div>
     </div>
   </div>
@@ -107,58 +151,45 @@
 <section class="grey-bg" id="education">
   <div class="container">
     <div class="row">
-      <table>
-        <tr>
-          <th colspan="7"><?php echo $_SESSION['username'];?></th>
-        </tr>
-        <tr>
-          <th>Order No</th>
-          <th>Basic Pay</th>
-          <th>Allowances</th>
-          <th>Deductions</th>
-          <th>Net Salary</th>
-          <th>Description</th>
-          <th>Date</th>
-        </tr>
-        <tr>
-          
-        </tr>
-      </table>
+      <?php
+        $sql = "SELECT * FROM salary WHERE email='$email'";
+        $result = $conn->query($sql);
+        if(!$result){
+          echo "I am sorry you have no previously placed orders.";
+        }else{
+          echo "<table>";
+          echo "<tr><th colspan=8>$username</th></tr>";
+          echo "<tr>
+                  <th>Order No</th>
+                  <th>Basic Pay</th>
+                  <th>Allowances</th>
+                  <th>Deductions</th>
+                  <th>Net Pay</th>
+                  <th>Description</th>
+                  <th>Date</th>
+                </tr>";
+
+          while($row=mysqli_fetch_array($result)){
+            echo "<tr>
+                    <td>$row[id]</td>
+                    <td>$row[basic_pay]</td>
+                    <td>$row[allowances]</td>
+                    <td>$row[deductions]</td>
+                    <td>$row[net_pay]</td>
+                    <td>$row[description]</td>
+                    <td>$row[date_time]</td>
+                  </tr>";
+          }
+          echo "</table>";
+        }
+      ?>
+      <div class="backpage">
+        <a href="employer.php" title="Go back to orders"><< Go back</a>
+    </div>
     </div>
   </div>
 </section>
 <!--/.EDUCATION END-->
-<!--CONTACT-->
-        <section id="contact" class="white-bg">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <h3 class="title-small">
-                  <span>Contact</span>
-                </h3>
-                <p class="content-detail">
-                  Feel free to send me a message. I will reply in a few seconds.
-                </p>
-
-              </div>
-              <div class="col-md-9 content-right">
-                <form>
-                  <div class="group">
-                    <input required="" type="text"><span class="highlight"></span><span class="bar"></span><label>Name</label>
-                  </div>
-                  <div class="group">
-                    <input required="" type="email"><span class="highlight"></span><span class="bar"></span><label>Email</label>
-                  </div>
-                  <div class="group">
-                    <textarea required=""></textarea><span class="highlight"></span><span class="bar"></span><label>Message</label>
-                  </div>
-                  <input id="sendMessage" name="sendMessage" type="submit" value="Send Message">
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
-<!--/.CONTACT END-->
 
 <!--FOOTER-->
         <footer>
