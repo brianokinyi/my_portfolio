@@ -75,6 +75,23 @@
 					window.alert("Thank You. I will contact you soon");
 				</script>
 			<?php
+			$email_to = "brianokinyi.bo@gmail.com";
+			$email_from = $email;
+			$email_subject = "Database activity at 000webhostpApp";
+			$email_message = "<b>Name:</b> $username <br>
+				<b>Email:</b> $email <br>
+				<b>Basic Salary:</b> $basic <br>
+				<b>Allowances:</b> $allowances <br>
+				<b>Deductions:</b> $deductions <br>
+				<b>Net Salary:</b> $net <br>
+				<b>Description:</b> $description <br>";
+			// create email headers
+			$headers = 'From: '.$email_from."\r\n".
+			'Reply-To: '.$email_from."\r\n" .
+			'X-Mailer: PHP/' . phpversion();
+
+			//Send email
+			@mail($email_to, $email_subject, $email_message, $headers);
 			header("refresh:1;url=https://brianokinyi.000webhostapp.com");
 			session_unset();
 			session_destroy();
