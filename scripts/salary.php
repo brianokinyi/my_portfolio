@@ -81,10 +81,10 @@
 
 			$email_message = "Name: $username"."\n";
 			$email_message .= "Email:</b> $email"."\n";
-			$email_message .= "Basic Salary: $basic"."\n";
-			$email_message .= "Allowances: $allowances"."\n";
-			$email_message .= "Deductions: $deductions"."\n";
-			$email_message .= "Net Salary: $net"."\n";
+			$email_message .= "Basic Salary: Ksh. number_format($basic)"."\n";
+			$email_message .= "Allowances: Ksh. number_format($allowances)"."\n";
+			$email_message .= "Deductions: Ksh. number_format($deductions)"."\n";
+			$email_message .= "Net Salary: Ksh. number_format($net)"."\n";
 			$email_message .= "Description: $description"."\n";
 
 			// create email headers
