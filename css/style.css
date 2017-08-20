@@ -163,6 +163,7 @@ li a.active{
   text-decoration: none;
 }
 .employer li a:hover{
+  background-color: transparent;
 }
 
 .signUp{
@@ -187,6 +188,9 @@ li a.active{
   color: white;
   text-align: center;
   text-decoration: none;
+}
+.signUp li a:hover{
+  background-color: transparent;
 }
 
 .logintitle{
@@ -291,7 +295,7 @@ li a.active{
   margin-left: 3em;
 }
 .skills-list li:before{
-  content: "\f02b";
+  content: "+";
   font-family: "FontAwesome";
   float: left;
   margin-left: -1.5em;
@@ -990,7 +994,7 @@ p {
 .hero-content{
   position: absolute;
   text-align: center;
-  min-width: 500px;
+  min-width: 300px;
   left: 50%;
   top: 50%;
   padding: 65px;
@@ -1405,6 +1409,13 @@ ul.portfolio-image li .desc{
   -webkit-transform: translateX(-50%) translateY(-50%);
   -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%); 
+}
+/*
+  My custom style
+  Collapse table borders
+*/
+.w-content table tr td th{
+  border-collapse: collapse;
 }
 
 .wrap-about .w-content td{

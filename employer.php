@@ -1,4 +1,5 @@
 <?php
+/*
   ob_start();
   session_start();
   if(!isset($_SESSION['email'])){
@@ -10,16 +11,18 @@
       header("refresh:1;url=https://brianokinyi.000webhostapp.com/signup.html");
       die();
   }
+  */
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Brian - My Portfolio</title>
+    <title>Brian - My Boss</title>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta content="BdgPixel" name="author">
+    <meta name="description" content="I am more interested in finding a position that is good fit for my skills and interests. I am confident that you are offering a salary that is competetive in the current market.">
+    <meta content="Brian Okinyi" name="author">
     <!--Fav-->
     <link href="images/favicon.ico" rel="shortcut icon">
     
@@ -62,7 +65,15 @@
     .layout-slider { margin-bottom: 60px; width: 100%; }
   </style>
   </head>
+
   <body>
+  <!--PRELOADER-->
+    <div id="preloader">
+      <div id="status">
+        <img alt="Loading" src="images/logo-big.png">
+      </div>
+    </div>
+    <!--/.PRELOADER END-->
     <!-- header starts here -->
   <div id="fb-bar">
     <div id="fb-frame">

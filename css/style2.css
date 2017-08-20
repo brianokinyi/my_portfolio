@@ -57,7 +57,7 @@ h2 { font-size: 30px; line-height:38px; font-weight:normal; }
 	background: transparent;
 	border-bottom: 1px solid #009aff;
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.52);
-	min-width: 1000px;
+	min-width: 600px;
 	width: 100%;
 	z-index: 1000;
 }
@@ -114,7 +114,7 @@ h2 { font-size: 30px; line-height:38px; font-weight:normal; }
 	font-size: 13px;
 	margin: 0;
 	padding: 5px 8px 5px 8px;
-	width: 25em;
+	/*width: 25em;*/
 	border:1px solid #3A518A;
 }
 #login_form .inputtext:hover {

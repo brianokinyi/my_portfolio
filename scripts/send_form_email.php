@@ -77,7 +77,7 @@ if(isset($_POST['sendMessage'])) {
 </script>
 <?php 
 
-  header("refresh:0;url=../index.html");
+  header("refresh:1;url=https://brianokinyi.000webhostapp.com");
  
 }
 

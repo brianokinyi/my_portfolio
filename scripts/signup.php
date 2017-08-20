@@ -74,11 +74,11 @@
 			die();
 		}
 
-		//Connect to database
+		//Database variables for 000webhostpApp
 		$servername = "localhost";
-		$serveruser = "root";
-		$serverpass = "";
-		$dbname = "my_portfolio";
+		$serveruser = "id2187064_brianokinyi";
+		$serverpass = "12345678";
+		$dbname = "id2187064_my_portfolio";
 
 		$conn = new mysqli($servername, $serveruser, $serverpass, $dbname);
 		//Check connection
